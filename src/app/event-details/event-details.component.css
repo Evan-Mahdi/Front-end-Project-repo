@@ -18,6 +18,8 @@ button.manage{
     background-color: white;
     bottom: 95%;
     left:40%;
+   
+   
     transition: all 0.4s;
     cursor: pointer;
     transform: scale(1);

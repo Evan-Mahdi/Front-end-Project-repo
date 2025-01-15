@@ -64,7 +64,9 @@
               "browserTarget": "project-name:build:production"
             },
             "development": {
-              "browserTarget": "project-name:build:development"
+              "browserTarget": "project-name:build:development",
+              "proxyConfig": "src/proxy.config.json"
+
             }
           },
           "defaultConfiguration": "development"

@@ -1,0 +1,107 @@
+.container {
+    display: flex;
+    flex-direction: column;
+  }
+  .filters {
+    display: flex;
+    margin: 2rem;
+    justify-content: space-between;
+    padding: 2rem;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    transition: all 0.4s;
+    border-radius: 15px;
+  }
+  .filters:hover{
+      background-color: rgb(21, 21, 21);
+      color: rgb(255, 255, 255);
+  }
+  a{
+      transition: all 0.4s;
+  
+  }
+  a:hover{
+      font-size: 18px;
+      transform: scale(1.02);
+      border: solid rgb(104, 178, 196) 3px;
+      padding: 12px;
+      border-radius: 15%;
+  }
+  .products {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+    margin-top: 3rem;
+    width: 100%;
+    height:100%;
+  }
+  
+  .product-item {
+    margin: 2rem;
+    padding: 1rem;
+  }
+  article {
+    border: 1px solid transparent;
+    border-radius: 15px;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+    transition: all 0.4s;
+    /* background-color: white; */
+    cursor: pointer;
+    flex-basis: 200px;
+
+  }
+  article:hover {
+    background-color: rgb(29, 29, 28);
+    /* background-color: rgb(128, 128, 94); */
+    transform: scale(1.02);
+    border: solid 2px rgb(222, 21, 21);
+    color: rgb(255, 255, 255);
+  
+  }
+
+
+  @media screen and (max-width: 550px) {
+
+  .filters {
+    display: flex;
+    margin: 10px;
+    justify-content: space-between;
+    padding: 1rem;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    transition: all 0.4s;
+    border-radius: 15px;
+    font-size: 10px;
+  }
+
+  a:hover{
+    font-size: 10px;
+    transform: scale(1.01);
+    border: solid rgb(104, 178, 196) 3px;
+    padding: 5px;
+    border-radius: 15%;
+}
+.product-item {
+  margin: auto;
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+}
+
+  }
+  .green-background {
+    background-color: rgb(197, 237, 197);
+  }
+  .blue-background {
+    background-color: rgb(206, 206, 238);
+  }

@@ -1,1 +1,5 @@
-<p>event-list works!</p>
+<div class="products">
+    <article cdkDrag *ngFor="let event of events" [ngClass]="event.allDay ? 'green-background' : 'blue-background'" >
+      <app-event-details [event]="event"></app-event-details>
+    </article>
+  </div>
