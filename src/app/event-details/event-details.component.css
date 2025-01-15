@@ -1,0 +1,30 @@
+.event-details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+text-decoration: underline;
+}
+
+button.manage{
+    position: absolute;
+    border: 1px solid;
+    padding: 0.5rem;
+    border-radius: 20%;
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    background-color: white;
+    bottom: 95%;
+    left:40%;
+    transition: all 0.4s;
+    cursor: pointer;
+    transform: scale(1);
+  
+  }
+  button:hover {
+    visibility: visible;
+    transform: scale(2.1);
+    /* background-color: rgb(62, 144, 144); */
+}

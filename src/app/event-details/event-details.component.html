@@ -1,1 +1,25 @@
-<p>event-details works!</p>
+<div  class="event-details"  >
+    <div class="event-info">
+        <div class="title">
+            <h1 >{{event.title}}</h1>
+        </div>
+        
+        <div class="description">
+            <h3>Description:{{event.description}}</h3>
+        </div>
+        <div class="date">
+            <p>Date: {{event.date  | date: 'EEEE, d MMMM yyyy'}}</p>
+        </div>
+        <div class="time">
+            <p>Time: {{event.time}}</p>
+        </div>
+        <div class="allDay">
+            <div>{{ event.allDay ? event.title + ' Event is all-day' :  event.title + ' Event is not all-day' }}
+            </div>        
+        </div>
+
+    </div>
+
+    <button class="manage" (click)="navigateToForm(event.id)">Manage</button> 
+
+</div>
