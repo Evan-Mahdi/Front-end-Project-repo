@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-event-details',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./event-details.component.css']
 })
 export class EventDetailsComponent {
+  @Input() event!:any;
 
+  constructor(private router :Router){
+    
+  }
+  navigateToForm(eventId:any):void{
+    this.router.navigate(["/add-form",eventId])
+    }
 }

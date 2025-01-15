@@ -25,6 +25,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/angular-calendar/css/angular-calendar.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -63,7 +64,9 @@
               "browserTarget": "project-name:build:production"
             },
             "development": {
-              "browserTarget": "project-name:build:development"
+              "browserTarget": "project-name:build:development",
+              "proxyConfig": "src/proxy.config.json"
+
             }
           },
           "defaultConfiguration": "development"
@@ -87,6 +90,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/angular-calendar/css/angular-calendar.css",
               "src/styles.css"
             ],
             "scripts": []
