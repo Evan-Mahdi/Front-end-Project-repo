@@ -1,11 +1,12 @@
 <div class="container">
-      <a routerLink="/home">Home</a>
-      <a routerLink="/event-list">Event Lists</a>
+
+      <a routerLink="/home" *ngIf="isLoggedIn">Home</a>
+      <a routerLink="/event-list" *ngIf="isLoggedIn">Event Lists</a>
       <div class="addForm" >
-        <a routerLink="/add-form">Add Event</a>
+        <a routerLink="/add-form" *ngIf="isLoggedIn">Add Event</a>
       </div>
       <div class="logOut" >
-        <a >Log out</a>
+        <a (click)="logout()" *ngIf="isLoggedIn">Log out</a>
       </div>
      
   </div>
