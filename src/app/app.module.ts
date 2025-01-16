@@ -16,8 +16,6 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { ReactiveFormsModule } from '@angular/forms'; 
 import { AuthGuard, AuthModule } from '@auth0/auth0-angular';
 import { LoginComponent } from './login/login.component';
-import { SocialAuthServiceConfig, SocialLoginModule } from 'angularx-social-login';
-import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
