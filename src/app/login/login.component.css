@@ -1,0 +1,198 @@
+body {
+    background: linear-gradient(to bottom, #4e73df, #224abe);
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .card {
+    background: #fff;
+    border-radius: 10px;
+  }
+  
+  .card h3 {
+    font-weight: bold;
+    color: #4e73df;
+  }
+  
+  .card button {
+    font-weight: bold;
+  }
+  
+  .card a {
+    text-decoration: none;
+    color: #4e73df;
+  }
+  
+  .card a:hover {
+    text-decoration: underline;
+  }
+  
+form {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    height: auto;
+    margin-top: 3rem;
+    border:solid 0.5px grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .imageForm{
+    position: relative;
+    width: 150px;
+    height: auto;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+  }
+  
+  /* Label styling */
+  label {
+    text-align: left;
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #232020;
+    padding: 5px;
+    width: 100%;
+  }
+  
+  /* Input fields styling */
+  input[type="email"],
+  input[type="password"],
+  .searchInput,
+  textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #fff;
+    box-sizing: border-box;
+  }
+  
+  input[type="email"]:focus,
+  input[type="password"]:focus,
+  textarea:focus {
+    border-color: #4da0ff;
+    outline: none;
+    background-color: #eef;
+  }
+  
+  /* Button styling */
+  button {
+    width: 48%;
+    padding: 10px;
+    background-color: #000000;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #ffffff;
+    transform: scale(1.03);
+    border: solid 3px rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+  }
+  
+  /* Add some spacing between form elements */
+  input,
+  textarea,
+  button {
+    margin-bottom: 15px;
+  }
+  
+  
+  .all-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  
+  .email{
+    margin-bottom: 3rem;
+  }
+  .password{
+    margin-bottom: 2rem;
+  }
+  em{
+    margin-top: 0;
+    background: red;
+    width:100%; 
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: #fff;
+    font-weight: bold;
+  }
+
+
+  @media screen and (max-width: 550px) {
+    form {
+      background-color: #f9f9f9;
+      padding: 5px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: auto;
+      font-family: Arial, sans-serif;
+      height: auto;
+      border: solid 0.5px grey;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 0.9rem 0.5rem rgba(0.2, 0.2, 0.2, 0.2);
+    }
+  
+    /* Input fields styling */
+    input[type="email"],
+    input[type="password"],
+    .searchInput,
+    textarea {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      background-color: #fff;
+      box-sizing: border-box;
+    }
+    /* Label styling */
+    label {
+      text-align: left;
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #ffffff;
+      background-color: #232020;
+      padding: 5px;
+      font-size: 12px;
+      width: 98%;
+    }
+    button {
+      width: 38%;
+      padding: 8px;
+      background-color: #000000;
+      color: white;
+      font-size: 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.4s ease-in-out;
+    }
+  }
+  

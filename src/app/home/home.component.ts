@@ -4,6 +4,7 @@ import { addMonths, subMonths, startOfToday, addDays } from 'date-fns';
 import { EventListService } from '../event-list/event-list.service';
 import { Router } from '@angular/router';
 import { Subject } from 'rxjs';
+import { AuthService } from '@auth0/auth0-angular';
 
 
 @Component({
@@ -39,7 +40,7 @@ ngOnInit(){
 //Constructor
  constructor(
   private eventSvc: EventListService,
-   private router:Router){}
+   private router:Router,private auth: AuthService,){}
 
    // Method to handle event creation on date click
    addEvent(date: any): void {
@@ -124,4 +125,6 @@ ngOnInit(){
   navigateToForm(eventId:any):void{
     this.router.navigate(["/add-form",eventId])
     }
+   
+   
 }
