@@ -1,0 +1,204 @@
+body{
+    background-color: rgb(255, 252, 252);
+    margin: 0;
+    padding: 0;
+}
+.form-container{
+    padding: 5rem;
+}
+form {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.2);
+    height: auto;
+    margin-top: 3rem;
+    border:solid 3px  rgb(0, 0, 0);
+  }
+  .imageForm{
+    position: relative;
+    width: 150px;
+    height: auto;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+  }
+  
+  /* Label styling */
+  label {
+    text-align: left;
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #232020;
+    padding: 5px;
+    width: 100%;
+    border-radius: 5px;
+    transition: all 0.4s;
+  }
+  label:hover{
+    transform: scale(1.01);
+    color: rgb(194, 255, 255);
+  }
+  
+  
+  
+  /* Input fields styling */
+  input[type="text"],
+  input[type="number"],
+  .searchInput,
+  textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #fff;
+    box-sizing: border-box;
+    transition: all 0.4s;
+  
+  }
+  input:hover{
+    transform: scale(1.04);
+    /* background-color: #bedafb; */
+    background-color:rgb(194, 255, 255);
+   }
+  input[type="text"]:focus,
+  input[type="number"]:focus,
+  textarea:focus {
+    border-color: #4da0ff;
+    outline: none;
+    background-color: #eef;
+  }
+  
+  /* Button styling */
+  button {
+    width: 48%;
+    padding: 10px;
+    background-color: #000000;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #ffffff;
+    transform: scale(1.03);
+    border: solid 3px rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+  }
+  
+  /* Add some spacing between form elements */
+  input,
+  textarea,
+  button {
+    margin-bottom: 15px;
+  }
+  
+  .editTitle {
+    margin-bottom: 1rem;
+  }
+  .addNewItem{
+    background: white;
+  }
+  .btn-in-update-view{
+    display: flex;
+    justify-content: space-between;
+    background: white;
+  }
+  .all-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  
+  @media screen and (max-width: 550px) {
+  
+  
+    form {
+      background-color: #f9f9f9;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: auto;
+      margin: auto;
+      font-family: Arial, sans-serif;
+      height: auto;
+      margin-top: 1rem;
+      border:solid 0.5px grey;
+    }
+  
+  
+    input[type="text"],
+    input[type="number"],
+    .searchInput,
+    textarea {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 10px;
+      background-color: #fff;
+      box-sizing: border-box;
+      transition: all 0.4s;
+    
+    }
+    label {
+      text-align: left;
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #ffffff;
+      background-color: #232020;
+      padding: 2px;
+      width: 100%;
+      border-radius: 5px;
+      transition: all 0.4s;
+      font-size: 10px;
+    }
+    button {
+      width: 38%;
+      padding: 7px;
+      background-color: #000000;
+      color: white;
+      font-size: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.4s ease-in-out;
+    }
+    
+    button:hover {
+      background-color: #ffffff;
+      transform: scale(1.01);
+      border: solid 3px rgb(0, 0, 0);
+      color: rgb(0, 0, 0);
+    }
+    .imageForm{
+      position: relative;
+      width: 100px;
+      height: auto;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 10px;
+      color: #333;
+      font-size: 15px;
+    }
+
+  
+  }

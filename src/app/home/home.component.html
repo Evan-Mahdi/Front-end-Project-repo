@@ -1,1 +1,71 @@
-<p>home works!</p>
+<div class="container">
+    <div class="filter-container">
+        <div class="filter-view">
+            <button (click)="previousMonth()">Previous</button>
+            <button (click)="currentDay()">Today</button>
+            <button (click)="nextMonth()">Next</button>
+        </div>
+        <h3>{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}</h3>
+        
+      <div class="filter-period">
+        <button (click)="setView('month')">Month</button>
+        <button (click)="setView('week')">Week</button>
+        <button (click)="setView('day')">Day</button>
+      </div>
+    </div>
+    <div class="calendar-container">
+      <mwl-calendar-month-view 
+      [viewDate]="viewDate" 
+      [events]="events" 
+      (dayClicked)="handleDateClick($event.day.date)" 
+        *ngIf="view==='month'"
+        >
+      ></mwl-calendar-month-view>
+    
+      <mwl-calendar-week-view 
+      [viewDate]="viewDate" 
+      *ngIf="view==='week'"
+      [events]="events"
+      (hourSegmentClicked)="handleDateClick($event.date)"
+      [hourSegments]="2"
+      [hourSegmentHeight]="40"
+      (hourSegmentClicked)="addEvent($event.date)"
+      [refresh]="refresh"></mwl-calendar-week-view>
+
+      <mwl-calendar-day-view 
+      [viewDate]="viewDate" 
+      *ngIf="view==='day'" 
+      [events]="events"
+      [hourSegments]="2"
+      [hourSegmentHeight]="40"
+      (hourSegmentClicked)="addEvent($event.date)"
+      [refresh]="refresh" 
+      (hourSegmentClicked)="handleDateClick($event.date)"></mwl-calendar-day-view>
+    </div>
+
+    <!-- <div *ngIf="selectedEvent" class="event-form">
+      <h3>Edit Event</h3>
+      <input [(ngModel)]="selectedEvent.title" placeholder="Event Title">
+      <input [(ngModel)]="selectedEvent.start" type="datetime-local">
+      <input [(ngModel)]="selectedEvent.end" type="datetime-local">
+      
+      <button (click)="saveEvent()">Save</button>
+      <button (click)="cancelEdit()">Cancel</button>
+    </div> -->
+<div cdkDrag *ngIf="selectedEvents.length > 0" class="event-modal">
+  <h3>Events on {{ selectedDate | date: 'fullDate' }}</h3>
+  <ul *ngFor="let event of selectedEvents">
+    <li >
+      Title: {{ event.title }}
+    </li>
+    <li >
+      Date: {{ event.start}}
+    </li>
+    <li >
+      Description: {{ event.meta.description }}
+    </li>
+    <button (click)="navigateToForm(event.id)">Manage Event</button>
+  </ul>
+  <button (click)="closeModal()">Close</button>
+</div>
+  </div>

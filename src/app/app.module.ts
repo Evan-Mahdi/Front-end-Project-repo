@@ -12,6 +12,7 @@ import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { HttpClientModule } from '@angular/common/http';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -26,6 +27,8 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     
   ],
   imports: [
+    FormsModule, 
+    ReactiveFormsModule, 
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
