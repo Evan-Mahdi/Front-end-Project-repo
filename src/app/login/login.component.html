@@ -1,0 +1,50 @@
+<!-- <app-loading-spinner [isLoading]="isLoading" ></app-loading-spinner> -->
+
+<form >
+    
+  <h2>Log In</h2>
+  
+  <div class="email">
+      <label>Email:</label>
+      <input    type="email" formControlName="email"  name="email" required>
+      <!-- <em class="error" *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">Email is not valid</em> -->
+    </div>
+    
+    <div class=" password">
+      <label>Password:</label>
+      <input  type="password" formControlName="password" name="password" required formControlName="password">
+      <!-- <em class="error" *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">Password is not valid</em> -->
+    </div>
+      
+     <div class="all-buttons">
+       <button type="submit">Log In</button>
+       <button type="submit" routerLink="/register" >Register</button>
+      </div>
+      <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="card p-4 shadow-lg" style="max-width: 400px; width: 100%;">
+          <h3 class="text-center mb-4">Welcome Back</h3>
+          <p class="text-center text-muted mb-4">Login to access your account</p>
+      
+          <div *ngIf="auth.isAuthenticated$ | async; else loggedOut">
+            <div class="text-center">
+              <p class="mb-3">Welcome, <strong>{{ (auth.user$ | async)?.name }}</strong></p>
+              <button class="btn btn-primary btn-block" (click)="logout()">Logout</button>
+            </div>
+          </div>
+      
+          <ng-template #loggedOut>
+            <div class="mb-3">
+              <button class="btn btn-primary btn-block w-100" (click)="loginWithAuth0()">
+                <i class="fas fa-sign-in-alt me-2"></i> Login with Auth0
+              </button>
+            </div>
+            <div class="text-center">
+              <small class="text-muted">
+                Don't have an account? <a href="#">Sign up here</a>
+              </small>
+            </div>
+          </ng-template>
+        </div>
+      </div>
+  </form>
+  

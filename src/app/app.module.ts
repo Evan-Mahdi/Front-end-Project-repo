@@ -13,6 +13,8 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { HttpClientModule } from '@angular/common/http';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { AuthGuard, AuthModule } from '@auth0/auth0-angular';
 
 
 
@@ -24,6 +26,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SiteHeaderComponent,
     HomeComponent,
     EventListComponent,
+    LoginComponent,
     
   ],
   imports: [
@@ -33,9 +36,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
     DragDropModule,
-    CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory })
+    CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory }),
+    AuthModule.forRoot({
+      domain: 'dev-zdhufkgv0kmvghgz.us.auth0.com',
+      clientId: '8kJXWvZfdC99lLAFJe0bOO8TqlhMo9eo',  
+      authorizationParams: {
+        redirect_uri: window.location.origin + "/home"
+      }
+    }),
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

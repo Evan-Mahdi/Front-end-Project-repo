@@ -3,13 +3,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddFormComponent } from './add-form/add-form.component';
 import { EventListComponent } from './event-list/event-list.component';
 import { HomeComponent } from './home/home.component';
+import { AuthGuard } from '@auth0/auth0-angular';
+import { LoginComponent } from './login/login.component';
+
 
 const routes: Routes = [
-  {path:"",redirectTo:'home',pathMatch:"full"},
-  {path:"home",component:HomeComponent},
-  {path:"event-list",component:EventListComponent},
-  {path:"add-form",component:AddFormComponent},
-  { path: 'add-form/:id', component: AddFormComponent }
+  { path: "", redirectTo: "/login", pathMatch: "full" },
+  { path: "login", component: LoginComponent },
+  { path: "home", component: HomeComponent,canActivate: [AuthGuard] },
+  { path: "event-list", component: EventListComponent },
+  { path: "add-form", component: AddFormComponent },
+  { path: "add-form/:id", component: AddFormComponent }
 ];
 
 @NgModule({
