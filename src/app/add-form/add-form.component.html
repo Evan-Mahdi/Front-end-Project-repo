@@ -1,1 +1,33 @@
-<p>add-form works!</p>
+<form  [formGroup]="eventForm" (ngSubmit)="onSubmit($event)">
+    <h2>{{ eventId>0 ? 'Manage Event' : 'Add New Event'}}</h2>
+
+   <label htmlFor="item-name" >Title:</label>
+   <input type="text"  formControlName="title" />
+   <br />
+
+   <label htmlFor="description"> description:</label>
+   <input type="text" id="description"  formControlName="description"/>
+   <br />
+
+   <label >Date:</label>
+   <input type="date" id="price" formControlName="date"  />
+   <br />
+
+   <label htmlFor="category">Time:</label>
+   <input type="time" id="category" formControlName="time"  />
+   <br />
+   <label htmlFor="category">All Day:</label>
+   <input type="boolean" id="category" formControlName="allDay"  />
+   <br />
+
+   <br />
+    <div  >
+       <div *ngIf="eventId===0">
+          <button  type="submit" value="Add Item" >Add Item</button>
+       </div>
+       <div *ngIf="eventId>0" class="all-buttons">
+           <button  type="submit" value="Edit Item" >Edit Item</button>
+           <button  type="submit" value="Delete Item">Delete Item</button>
+       </div>
+   </div>
+</form>
