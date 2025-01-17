@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
     this.auth.loginWithRedirect();
   }
   logout(): void {
-    this.auth.logout({ logoutParams: { returnTo: 'http://localhost:4200' } });
+    this.auth.logout({ logoutParams: { returnTo: 'https://create-event-app.netlify.app/' } });
   }
 }
 
