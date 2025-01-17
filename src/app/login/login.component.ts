@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit {
     try {
       this.auth.logout({
         logoutParams: {
-          returnTo:https://create-event-app.netlify.app/login,
+        returnTo: "https://create-event-app.netlify.app/login",
         },
       });
     } catch (error) {
