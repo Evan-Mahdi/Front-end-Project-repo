@@ -39,7 +39,7 @@ import { LoginComponent } from './login/login.component';
       domain: 'dev-zdhufkgv0kmvghgz.us.auth0.com',
       clientId: '8kJXWvZfdC99lLAFJe0bOO8TqlhMo9eo',  
       authorizationParams: {
-        redirect_uri: window.location.origin + "/home"
+        redirect_uri: window.location.origin
       }
     }),
     // RouterModule.forRoot(routes),
