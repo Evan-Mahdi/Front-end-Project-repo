@@ -38,9 +38,19 @@ export class LoginComponent implements OnInit {
     // Trigger login with redirect
     this.auth.loginWithRedirect();
   }
+  // logout(): void {
+  //   this.auth.logout({ logoutParams: { returnTo: 'https://create-event-app.netlify.app' } });
+  // }
   logout(): void {
-    this.auth.logout({ logoutParams: { returnTo: 'https://create-event-app.netlify.app' } });
+    try {
+      this.auth.logout({
+        logoutParams: {
+          returnTo: window.location.origin,
+        },
+      });
+    } catch (error) {
+      console.error('Logout error:', error);
+    }
   }
-   
 }
 
