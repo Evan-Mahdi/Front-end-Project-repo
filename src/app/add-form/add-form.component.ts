@@ -68,9 +68,9 @@ export class AddFormComponent {
       try{
         if(buttonValue==="Add Item"){
           const newEvent = this.eventForm.value;
-          console.log(`new Device added ${newEvent}`);
+          console.log(`new Event added ${newEvent}`);
           this.eventSvc.addEvent(newEvent).subscribe((response)=>{
-            console.log("Device added",response);
+            console.log("Event added",response);
             //reset a form
             this.eventForm.reset()
             this.router.navigate(['/event-list'])
