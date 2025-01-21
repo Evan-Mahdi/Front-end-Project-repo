@@ -14,7 +14,7 @@ export class EventListService {
   }
 
   getEventById(id: number): Observable<any> {
-    return this.http.get<any>(`${environment.apiUrl}/api/events/${id}`);
+    return this.http.get<any>(`${environment.apiUrl}/events/${id}`);
   }
   addEvent(event:any):Observable<any>{
     return this.http.post<any>(`${environment.apiUrl}/events`,event)
