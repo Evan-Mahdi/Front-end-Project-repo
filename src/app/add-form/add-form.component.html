@@ -1,7 +1,7 @@
-<form  [formGroup]="eventForm" (ngSubmit)="onSubmit($event)">
+<form [formGroup]="eventForm" (ngSubmit)="onSubmit($event)">
     <h2>{{ eventId>0 ? 'Manage Event' : 'Add New Event'}}</h2>
 
-   <label htmlFor="item-name" >Title:</label>
+   <label htmlFor="title" >Title:</label>
    <input type="text"  formControlName="title" />
    <br />
 
@@ -10,14 +10,14 @@
    <br />
 
    <label >Date:</label>
-   <input type="date" id="price" formControlName="date"  />
+   <input type="date" id="date" formControlName="date"  />
    <br />
 
-   <label htmlFor="category">Time:</label>
-   <input type="time" id="category" formControlName="time"  />
+   <label htmlFor="time">Time:</label>
+   <input type="time" id="time" formControlName="time"  />
    <br />
-   <label htmlFor="category">All Day:</label>
-   <input type="boolean" id="category" formControlName="allDay"  />
+   <label htmlFor="allDay">All Day:</label>
+   <input type="checkbox" id="allDay" formControlName="allDay"  />
    <br />
 
    <br />
